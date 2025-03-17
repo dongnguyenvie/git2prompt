@@ -1,7 +1,7 @@
 {
   "name": "@nolanx/git2prompt",
   "version": "1.0.0",
-  "description": "Convert a Git repository into a structured ChatGPT prompt for code analysis and improvement.",
+  "description": "Export a Git repository into an LLM-ready prompt for AI analysis.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -10,33 +10,26 @@
     "test": "jest",
     "prepublishOnly": "npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dongnguyenvie/git2prompt.git"
-  },
   "bin": {
     "git2prompt": "./dist/cli.js"
   },
-  "keywords": [
-    "git",
-    "repo",
-    "chatgpt",
-    "code-analysis",
-    "ai",
-    "typescript"
-  ],
-  "author": "Nolan nguyen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nolanx/git2prompt.git"
+  },
+  "author": "NolanX",
   "license": "MIT",
   "dependencies": {
+    "commander": "^13.1.0",
     "ignore": "^5.2.1",
     "simple-git": "^3.16.0"
   },
   "devDependencies": {
-    "@types/jest": "^29.0.0",
     "@types/node": "^20.0.0",
-    "commander": "^13.1.0",
     "eslint": "^8.0.0",
-    "jest": "^29.0.0",
     "typescript": "^5.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
