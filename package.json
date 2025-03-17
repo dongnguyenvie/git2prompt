@@ -8,7 +8,7 @@
     "build": "tsc",
     "lint": "eslint src --ext .ts",
     "prepackage:publish": "npm run build",
-    "package:publish": "npm publish --access public"
+    "package:publish": "npm publish"
   },
   "bin": {
     "git2prompt": "./dist/cli.js"
