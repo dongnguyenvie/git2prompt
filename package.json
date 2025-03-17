@@ -1,6 +1,6 @@
 {
   "name": "@nolanx/git2prompt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Export a Git repository into an LLM-ready prompt for AI analysis.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nolanx/git2prompt.git"
+    "url": "https://github.com/dongnguyenvie/git2prompt.git"
   },
   "author": "NolanX",
   "license": "MIT",
