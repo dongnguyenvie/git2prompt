@@ -8,7 +8,8 @@
     "build": "tsc",
     "lint": "eslint src --ext .ts",
     "test": "jest",
-    "prepublishOnly": "npm run build"
+    "prepackage:publish": "npm run build",
+    "package:publish": "npm publish --access public"
   },
   "bin": {
     "git2prompt": "./dist/cli.js"
