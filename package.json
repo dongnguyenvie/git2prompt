@@ -1,0 +1,42 @@
+{
+  "name": "@nolanx/git2prompt",
+  "version": "1.0.0",
+  "description": "Convert a Git repository into a structured ChatGPT prompt for code analysis and improvement.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src --ext .ts",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dongnguyenvie/git2prompt.git"
+  },
+  "bin": {
+    "git2prompt": "./dist/cli.js"
+  },
+  "keywords": [
+    "git",
+    "repo",
+    "chatgpt",
+    "code-analysis",
+    "ai",
+    "typescript"
+  ],
+  "author": "Nolan nguyen",
+  "license": "MIT",
+  "dependencies": {
+    "ignore": "^5.2.1",
+    "simple-git": "^3.16.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.0.0",
+    "@types/node": "^20.0.0",
+    "commander": "^13.1.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "typescript": "^5.0.0"
+  }
+}
