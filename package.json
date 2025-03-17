@@ -7,7 +7,6 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint src --ext .ts",
-    "test": "jest",
     "prepackage:publish": "npm run build",
     "package:publish": "npm publish --access public"
   },
