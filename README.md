@@ -1,9 +1,9 @@
-
 # @nolanx/git2prompt
 
 **Export a Git repository into an LLM-ready prompt for AI analysis.**
 
 ## Features
+
 - Extracts tracked files from a Git repository
 - Reads file contents while respecting `.gitignore` and `.git2promptignore`
 - Generates a structured prompt for AI models like ChatGPT
@@ -23,6 +23,10 @@ Or use it directly with `npx`:
 npx @nolanx/git2prompt /path/to/repo -o output.md
 ```
 
+## Important Reminder
+
+- The target repository must have Git installed and be initialized as a Git repository for this tool to work.
+
 ## Usage
 
 ### CLI Usage
@@ -32,9 +36,10 @@ npx @nolanx/git2prompt <repoPath> [options]
 ```
 
 #### Options:
-- `-o, --output <path>`  Path to save the generated output file (Optional)
-- `-V, --version`        Show package version
-- `-h, --help`           Show help menu
+
+- `-o, --output <path>` Path to save the generated output file (Optional)
+- `-V, --version` Show package version
+- `-h, --help` Show help menu
 
 #### Example:
 
@@ -87,7 +92,6 @@ import { exportGitToPrompt } from "@nolanx/git2prompt";
   console.log(output);
 })();
 ```
-
 
 ## License
 
