@@ -31,16 +31,24 @@ export async function exportGitToPrompt(
     }
 
     const gitignorePath = path.join(repoPath, ".gitignore");
+    const git2promptignorePath = path.join(repoPath, ".git2promptignore");
     const ig = ignore();
+
+    // Add .gitignore contents to the ignore instance if exists
     if (fs.existsSync(gitignorePath)) {
       ig.add(fs.readFileSync(gitignorePath, "utf-8"));
+    }
+
+    // Add .git2promptignore contents to the ignore instance if exists
+    if (fs.existsSync(git2promptignorePath)) {
+      ig.add(fs.readFileSync(git2promptignorePath, "utf-8"));
     }
 
     const fileContents = await Promise.all(
       gitFiles.split("\n").map(async (file) => {
         const filePath = path.join(repoPath, file);
         if (!file || ig.ignores(file)) {
-          return `### File: ${file}\nIgnored by .gitignore.`;
+          return `### File: ${file}\nIgnored by .gitignore or .git2promptignore.`;
         }
         if (fs.existsSync(filePath) && fs.lstatSync(filePath).isFile()) {
           return `### File: ${file}\n\

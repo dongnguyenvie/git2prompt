@@ -1,6 +1,6 @@
 {
   "name": "@nolanx/git2prompt",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Export a Git repository into an LLM-ready prompt for AI analysis.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

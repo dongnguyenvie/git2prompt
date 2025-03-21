@@ -1,10 +1,11 @@
+
 # @nolanx/git2prompt
 
 **Export a Git repository into an LLM-ready prompt for AI analysis.**
 
 ## Features
 - Extracts tracked files from a Git repository
-- Reads file contents while respecting `.gitignore`
+- Reads file contents while respecting `.gitignore` and `.git2promptignore`
 - Generates a structured prompt for AI models like ChatGPT
 - CLI support for quick usage
 
@@ -31,17 +32,17 @@ npx @nolanx/git2prompt <repoPath> [options]
 ```
 
 #### Options:
-- `-o, --output <path>`  Path to save the generated output file
+- `-o, --output <path>`  Path to save the generated output file (Optional)
 - `-V, --version`        Show package version
 - `-h, --help`           Show help menu
 
 #### Example:
 
 ```sh
-npx @nolanx/git2prompt /path/to/repo -o repo_analysis.txt
+npx @nolanx/git2prompt /path/to/repo -o output.md
 ```
 
-This will generate a structured output of the Git repository and save it to `repo_analysis.txt`.
+This will generate a structured output of the Git repository and save it to `output.md`.
 
 ### Output Format Example
 
